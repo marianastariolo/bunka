@@ -1,0 +1,1380 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*
+Theme Name: BUNKA
+Theme URL: http://www.720developments.com/
+Author: Mariana Stariolo
+Author URI: http://www.720developments.com/
+Version: 1.0
+*/
+
+/*-------------------------------------------------------------------------------------------
+
+INDEX:
+
+1. GLOBAL
+-1.1 Defaults
+-1.2 Text
+
+2. APPEARANCE AND STRUCTURE OF THE SITE
+-2.1 Header/Top
+-2.2 Footer
+
+3. LANDING PAGE CONTENT
+-3.1 About Us
+-3.2 Pink Box 
+-3.3 What Includes
+-3.4 Graphic
+-3.5 Blue Box
+-3.6 Steps
+-3.7 Sponsors
+-3.8 Like
+
+
+-------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 1. GLOBAL */
+/*-------------------------------------------------------------------------------------------*/
+
+/* ----------------------- 1.1 Defaults ----------------------- */
+
+body, html{
+    background: #FFF;
+}
+
+@-ms-viewport       { width: device-width; }
+
+*{
+	font-family: 'MyriadPro-Cond', Helvetica, Arial, sans-serif; 
+	font-size: 26px; 
+	color: #2f2e2d; 
+	line-height: 30px;
+    letter-spacing: 1px;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ----------------------- 1.2 Text ----------------------- */
+p{
+	margin: 0; 
+	padding: 0;
+}
+
+a{ 
+    text-decoration: none;
+    font-size: inherit; 
+    outline: none;
+    color: #303231; 
+    -webkit-transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s, outline 0.2s ease 0s; 
+    -o-transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s, outline 0.2s ease 0s; 
+    -moz-transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s, outline 0.2s ease 0s; 
+    -ms-transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s, outline 0.2s ease 0s;
+    transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s, outline 0.2s ease 0s; 
+}
+
+a:hover, a:active, a:focus{ 
+	text-decoration: none; 
+	outline: none;
+    color: #987d2c;
+}
+
+strong{
+	font-size: inherit;
+}
+
+/* --- Title --- */
+h2{
+    margin: 0;
+    padding: 0;
+    color: #4c4c4b;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: 2px;
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+    color: #505050;
+    font-weight: normal;
+    font-size: 68px;
+    line-height: 68px;
+    letter-spacing: 2px;
+}
+
+h3 strong{
+    font-family: 'MyriadPro-BoldCond', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #920808;
+}
+
+h4{
+    font-size: 48px;
+    line-height: 48px;
+    margin: 0 0 45px;
+    padding: 0;
+    font-weight: normal;
+    text-align: center;
+}
+
+h5{
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    text-align: center;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+/* --- Fonts --- */
+@font-face {
+    font-family: 'MyriadPro-BoldCond';
+    src: url('../fonts/myriadproboldcondensed.eot');
+    src: url('../fonts/myriadproboldcondensed.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/myriadproboldcondensed.woff') format('woff'),
+             url('../fonts/myriadproboldcondensed.ttf') format('truetype'),
+             url('../fonts/myriadproboldcondensed.svg#myriadproboldcondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadPro-Cond';
+    src: url('../fonts/myriadprocondensed.eot');
+    src: url('../fonts/myriadprocondensed.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/myriadprocondensed.woff') format('woff'),
+             url('../fonts/myriadprocondensed.ttf') format('truetype'),
+             url('../fonts/myriadprocondensed.svg#myriadprocondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. APPEARANCE AND STRUCTURE OF THE SITE */
+/*-------------------------------------------------------------------------------------------*/
+
+/* ----------------------- 2.1 Header/Top ----------------------- */
+.parallax {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header{
+    width: 100%;
+    background-image: url(../images/bg-header.jpg);
+    height: 1020px;
+}
+
+.header-border{
+    width: 100%;
+    height: 1020px;
+    background: url(../images/bg-header-border.png) 0 bottom repeat-x;
+}
+
+/* --- Logo --- */
+h1.logo{
+    display: block;
+    margin: 35px auto 80px;
+    padding: 0 auto;
+    width: 300px;
+    height: 128px;
+}
+
+h1.logo a{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 128px;
+    text-indent: -10000px;
+    background: url(../images/logo.png) 0 0 no-repeat;
+    background-size: 100%;
+}
+
+/* --- Phrase --- */
+.header .phrase{
+    width: 100%;
+    background: rgba(0,2,3,0.4);
+    padding: 20px 0;
+    text-align: center;
+    color: #FFF;
+    font-size: 54px;
+    line-height: 54px;
+    letter-spacing: 2px;
+}
+
+.header .phrase span{
+    display: block;
+    text-align: center;
+    font-family: 'MyriadPro-BoldCond', Helvetica, Arial, sans-serif;
+    color: #FFF;
+    font-size: 54px;
+    line-height: 54px;
+}
+
+/* --- Start Form --- */
+.start-form{
+    width: 543px;
+    height: 542px;
+    margin: 55px auto 0;
+    background: url(../images/bg-form.png) 0 0 no-repeat;
+    background-size: 100%;
+    padding: 140px 82px 0;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-control {
+    background-color: #dc3150;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 4px 4px 5px 0px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow:    inset 4px 4px 5px 0px rgba(0, 0, 0, 0.53);
+    box-shadow:         inset 4px 4px 5px 0px rgba(0, 0, 0, 0.53);
+    color: #FFF;
+    font-size: 36px;
+    height: 68px;
+    line-height: 40px;
+    padding: 21px 10px 14px;
+    text-align: center;
+    font-family: 'MyriadPro-Cond', Helvetica, Arial, sans-serif;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #FFF;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'MyriadPro-Cond', Helvetica, Arial, sans-serif;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+    color: #FFF;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'MyriadPro-Cond', Helvetica, Arial, sans-serif;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+    color: #FFF;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'MyriadPro-Cond', Helvetica, Arial, sans-serif;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {  
+    color: #FFF;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'MyriadPro-Cond', Helvetica, Arial, sans-serif;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+.btn-default {
+    display: block;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #4578a5;
+    border-color: #4578a5;
+    color: #FFF;
+    margin: 0 auto;
+    font-size: 35px;
+    line-height: 39px;
+    font-family: 'MyriadPro-BoldCond', Helvetica, Arial, sans-serif;
+    padding: 14px 75px 7px;
+}
+
+.btn-default:hover, .btn-default:active, .btn-default:focus{
+    background-color: #dc3150;
+    border-color: #dc3150;
+    color: #FFF;
+}
+
+.fancybox-inner{
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.fancybox-inner h2{
+    font-size: 62px;
+    line-height: 62px;
+}
+
+/* ----------------------- 2.2 Footer ----------------------- */
+footer{
+	width: 100%; 
+	margin: 0; 
+	padding: 0;
+    background: #de544b;
+}
+
+footer .container{
+    padding: 55px 0 75px;
+}
+
+footer .page-header{
+    background-image: url(../images/bg-title3.png);
+}
+
+.footer-form{
+    width: 100%;
+}
+
+.footer-form .row{
+    margin: 0;
+}
+
+.footer-form .form-control {
+    background-color: #af4740;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #FFF;
+    font-size: 18px;
+    height: 50px;
+    line-height: 20px;
+    padding: 17px 14px 13px;
+    text-align: left
+}
+
+.footer-form .form-control::-webkit-input-placeholder {
+    color: #de8f89;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.footer-form .form-control:-moz-placeholder { /* Firefox 18- */
+    color: #de8f89;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.footer-form .form-control::-moz-placeholder {  /* Firefox 19+ */
+    color: #de8f89;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.footer-form .form-control:-ms-input-placeholder {  
+    color: #de8f89;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.btn-default.red {
+    background-color: #87231d;
+    border-color: #87231d;
+    margin: 30px auto 0;
+    font-size: 30px;
+    line-height: 32px;
+    padding: 14px 95px 7px;
+}
+
+.btn-default.red:hover, .btn-default.red:active, .btn-default.red:focus{
+    background-color: #af4740;
+    border-color: #af4740;
+    color: #FFF;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 3. LANDING PAGE CONTENT */
+/*-------------------------------------------------------------------------------------------*/
+
+/* ----------------------- 3.1 About Us ----------------------- */
+.about-us{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.page-header {
+    border-bottom: none;
+    margin: 0 0 16px;
+    padding-bottom: 20px;
+    background: url(../images/bg-title.png) center bottom no-repeat;
+}
+
+.about-us p strong{
+    font-weight: normal;
+    font-family: 'MyriadPro-BoldCond', Helvetica, Arial, sans-serif;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+/* ----------------------- 3.2 Pink Box ----------------------- */
+.pink-box{
+    background: #de544b url(../images/border-rounded.png) 0 bottom repeat-x;
+    height: 355px;
+}
+
+.pink-box .container{
+    position: relative;
+    text-align: center;
+}
+
+.people1 {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  background: url(../images/people1.png) 0 0 no-repeat;
+  width: 402px;
+  height: 364px;
+  z-index: 1;
+}
+
+.people2 {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  background: url(../images/people2.png) 0 0 no-repeat;
+  width: 286px;
+  height: 368px;
+  z-index: 1;
+}
+
+.goto{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    background: url(../images/btn-next1.png) 0 0 no-repeat;
+    width: 63px;
+    height: 35px;
+    margin-left: -31px;
+    text-indent: -10000px;
+}
+
+.goto:hover, .goto:active{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.pink-box .container span{
+    display: block;
+    font-size: 48px;
+    line-height: 48px;
+    color: #FFF;
+    margin: 73px 0 40px;
+    font-family: 'MyriadPro-BoldCond', Helvetica, Arial, sans-serif;
+}
+
+.pink-box .table{
+    width: 475px;
+    margin: 0 auto;
+}
+
+.pink-box .table strong{
+    display: block;
+    font-weight: normal;
+    background: #FFF;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-family: 'MyriadPro-BoldCond', Helvetica, Arial, sans-serif;
+    font-size: 58px;
+    line-height: 58px;
+    letter-spacing: 2px;
+    color: #000;
+    padding: 14px 15px 3px;
+}
+
+.pink-box .table .left, .pink-box .table .right{
+    float: left;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFF;
+}
+
+.pink-box .table .right{
+    float: right;
+}
+
+
+/* ----------------------- 3.3 What Includes ----------------------- */
+
+/* --- What Includes1 --- */
+.what-inc{
+    background: url(../images/fork.png) 0 bottom repeat-x;
+    margin: 35px 0 30px;
+    padding: 0 0 40px;
+}
+
+.what-inc .container{
+    padding: 0 53px 0 105px;
+}
+
+.what-inc ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.what-inc ul li{
+    display: block;
+    float: left;
+    width: 50%;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 0 70px;
+    width: 50%;
+    height: 73px;
+    background: url(../images/fork2.png) 0 0 no-repeat;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+/* --- What Includes2 --- */
+.what-inc2{
+    margin: 35px 0 0;
+}
+
+.what-inc2 .container h4{
+    font-size: 45px;
+    line-height: 47px;
+    margin: 0 0 25px;
+    padding: 0;
+}
+
+.bg-grey{
+    background: url(../images/bg-list.png) 0 0 repeat;
+}
+
+.what-inc2 ul{
+    list-style: none;
+    margin: 0 auto;
+    padding: 20px 0 0 250px;
+}
+
+.what-inc2 ul li{
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 15px 63px;
+    background: url(../images/icon-list.png) 0 0 no-repeat;
+    font-size: 40px;
+    line-height: 43px;
+    text-transform: uppercase;
+}
+
+
+/* ----------------------- 3.4 Graphic ----------------------- */
+.graphic{
+    margin: 30px auto 25px;
+}
+
+.graphic img{
+    margin: 0 auto;
+}
+
+
+/* ----------------------- 3.5 Blue Box ----------------------- */
+.blue-box{
+    background: #6cafc2 url(../images/border-rounded.png) 0 bottom repeat-x;
+}
+
+.blue-box .container{
+    position: relative;
+    padding: 52px 0 60px;
+}
+
+.blue-box .page-header{
+    background-image: url(../images/bg-title2.png);
+}
+
+.blue-box h5, footer h5{
+    color: #FFF;
+}
+
+.blue-box .goto{
+    background: url(../images/btn-next2.png) 0 0 no-repeat;
+    height: 36px;
+    top: -16px;
+}
+
+.blue-box .col-md-3:first-child{
+    color: #FFF;
+    line-height: 36px;
+    font-size: 36px;
+    padding-left: 80px;
+}
+
+.blue-box .col-md-3 strong{
+    color: #FFF;
+    line-height: 48px;
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.blue-box .form-control {
+    background-color: #437484;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #FFF;
+    font-size: 18px;
+    height: 50px;
+    line-height: 20px;
+    padding: 17px 14px 13px;
+    text-align: left;
+}
+
+.blue-box .form-control::-webkit-input-placeholder {
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.blue-box .form-control:-moz-placeholder { /* Firefox 18- */
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.blue-box .form-control::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.blue-box .form-control:-ms-input-placeholder {  
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.btn-default.yellow {
+    margin: 69px 0 0;
+    background-color: #e5c332;
+    border-color: #e5c332;
+    color: #1b1a1a;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 14px 30px 7px;
+}
+
+
+/* ----------------------- 3.6 Steps ----------------------- */
+.steps{
+    background: url(../images/fork.png) 0 bottom repeat-x;
+    margin: 35px 0;
+    padding: 0 0 50px;
+}
+
+.steps .col-md-2{
+    text-align: center;
+    font-size: 20px;
+    line-height: 18px;
+}
+
+.steps figure{
+    width: 100%;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.steps figure img{
+    margin: 0 auto;
+}
+
+/* ----------------------- 3.7 Sponsors ----------------------- */
+.sponsors{
+    margin: 0;
+    padding: 0 0 50px;
+}
+
+.sponsors .container{
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #000;
+}
+
+.sponsors strong{
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #000;
+    font-family: 'MyriadPro-BoldCond', Helvetica, Arial, sans-serif;
+}
+
+.sponsors h2{
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 0 20px;
+    color: #000;
+}
+
+.sponsors-list{
+    background: url(../images/sponsors.jpg) 0 0 no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    width: 988px;
+    height: 143px;
+    margin: 33px auto 0;
+}
+
+/* ----------------------- 3.8 Like ----------------------- */
+.like{
+    width: 100%;
+    background-image: url(../images/like.jpg);
+    border-bottom: 1px solid #FFF;
+}
+
+.like .container{
+    position: relative;
+    padding: 175px 0 0;
+    background: url(../images/likelogo.png) center 27px no-repeat;
+    text-align: center;
+    font-size: 48px;
+    line-height: 48px;
+    color: #FFF;
+    height: 382px;
+}
+
+.like .container span{
+    display: block;
+    text-align: center;
+    font-size: 55px;
+    line-height: 55px;
+    color: #FFF;
+    font-family: 'MyriadPro-BoldCond', Helvetica, Arial, sans-serif;
+}
+
+.social{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: -30px;
+    left: 50%;
+    margin: 0 0 0 -125px;
+    padding: 0;
+    list-style: none;
+}
+
+.social li{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social li a{
+    display: block;
+    width: 67px;
+    height: 64px;
+    text-indent: -10000px;
+    background: url(../images/social.png) 0 0 no-repeat;
+}
+
+.social li a.social1{
+    background-position: 0 0;
+}
+
+.social li a.social2{
+    background-position: -77px 0;
+}
+
+.social li a.social3{
+    background-position: -156px 0;
+}
+
+.social li a.social4{
+    background-position: -233px 0;
+}
+
+.social li a.social5{
+    background-position: -313px 0;
+}
+
+.social li a.social6{
+    background: url(../images/social-last.png) 0 0 no-repeat;
+}
+
+.social li a.social1:hover, .social li a.social1:active,
+.social li a.social2:hover, .social li a.social2:active,
+.social li a.social3:hover, .social li a.social3:active,
+.social li a.social4:hover, .social li a.social4:active,
+.social li a.social5:hover, .social li a.social5:active,
+.social li a.social6:hover, .social li a.social6:active{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+
+/* =========================================================================
+   Media Queries
+   ========================================================================== */
+@media (max-width: 1279px) {
+
+h3, h3 strong{
+    font-size: 58px;
+    line-height: 58px;
+    letter-spacing: 1px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. APPEARANCE AND STRUCTURE OF THE SITE */
+/*-------------------------------------------------------------------------------------------*/
+
+/* ----------------------- 2.1 Header/Top ----------------------- */
+.header .phrase, .header .phrase span{
+    font-size: 50px;
+    line-height: 50px;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 3. LANDING PAGE CONTENT */
+/*-------------------------------------------------------------------------------------------*/
+
+/* ----------------------- 3.2 Pink Box ----------------------- */
+.pink-box .container{
+    padding-left: 90px;
+}
+
+.people1 {
+    left: -100px;
+}
+
+.people2 {
+    right: -10px;
+    width: 216px;
+}
+
+.about-us p strong{
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.pink-box {
+    overflow-x: hidden;
+}
+
+
+/* ----------------------- 3.3 What Includes ----------------------- */
+.what-inc2 ul {
+    padding: 20px 0 0 0;
+}
+
+.what-inc2 .container h4 {
+    font-size: 40px;
+    line-height: 42px;
+}
+
+.what-inc .container{
+    padding: 0;
+}
+
+.what-inc ul li{
+    font-size: 20px;
+    line-height: 22px;
+}
+
+
+/* ----------------------- 3.5 Blue Box ----------------------- */
+.blue-box .col-md-3:first-child {
+    padding-left: 0;
+}
+
+/* ----------------------- 3.6 Steps ----------------------- */
+.steps .col-md-2{
+    font-size: 18px;
+}
+
+/* ----------------------- 3.7 Sponsors ----------------------- */
+.sponsors h2{
+    font-size: 56px;
+    line-height: 56px;
+}
+
+.sponsors .container, .sponsors .container strong{
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.sponsors-list{
+    width: 100%;
+}
+
+}
+
+@media (max-width: 991px) {
+
+h3, h3 strong{
+    font-size: 38px;
+    line-height: 38px;
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. APPEARANCE AND STRUCTURE OF THE SITE */
+/*-------------------------------------------------------------------------------------------*/
+
+/* ----------------------- 2.1 Header/Top ----------------------- */
+.header, .header-border {
+    height: 900px;
+}
+
+h1.logo {
+    margin: 25px auto 30px;
+}
+
+.header .phrase, .header .phrase span{
+    font-size: 38px;
+    line-height: 38px;
+}
+
+.start-form{
+    margin: 35px auto 0;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 3. LANDING PAGE CONTENT */
+/*-------------------------------------------------------------------------------------------*/
+
+/* ----------------------- 3.2 Pink Box ----------------------- */
+.pink-box .container{
+    padding-left: 15px;
+}
+
+.people1 {
+    display: none;
+}
+
+.people2 {
+    right: -50px;
+}
+
+
+/* ----------------------- 3.3 What Includes ----------------------- */
+.what-inc .container{
+    padding: 0;
+}
+
+.what-inc ul li{
+    min-height: 55px;
+    height: auto;
+    margin-bottom: 20px;
+    padding-top: 0;
+}
+
+/* ----------------------- 3.5 Blue Box ----------------------- */
+.btn-default.yellow{
+    float: right;
+    margin: 0;
+}
+
+/* ----------------------- 3.6 Steps ----------------------- */
+.steps .col-md-2{
+    min-height: 200px;
+}
+
+/* ----------------------- 3.7 Sponsors ----------------------- */
+.sponsors {
+    margin: 0;
+    padding: 0;
+}
+
+.sponsors h2{
+    font-size: 56px;
+    line-height: 56px;
+}
+
+.sponsors .container, .sponsors .container strong{
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.sponsors-list{
+    width: 700px;
+}
+
+}
+
+@media (max-width: 767px) {
+
+h2{
+    font-size: 62px;
+    line-height: 62px;
+}
+
+h3, h3 strong{
+    font-size: 38px;
+    line-height: 38px;
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. APPEARANCE AND STRUCTURE OF THE SITE */
+/*-------------------------------------------------------------------------------------------*/
+
+/* ----------------------- 2.1 Header/Top ----------------------- */
+.header, .header-border {
+    height: 1000px;
+}
+
+.header .phrase, .header .phrase span{
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.start-form {
+    -webkit-background-size: auto;
+    background-size: auto;
+    background-position: center 0;
+    margin: 35px auto 0;
+    padding: 140px 15px 0;
+    width: 100%;
+    max-width: 543px;
+}
+
+.btn-default {
+    padding: 14px 0 7px;
+    width: 100%;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 3. LANDING PAGE CONTENT */
+/*-------------------------------------------------------------------------------------------*/
+
+/* ----------------------- 3.2 Pink Box ----------------------- */
+.pink-box{
+    height: 505px
+}
+
+.pink-box .container span{
+    font-size: 38px;
+    line-height: 38px;
+    margin: 63px 0 20px;
+}
+
+.people2 {
+    display: none;
+}
+
+.pink-box .table .left, .pink-box .table .right{
+    float: none;
+    width: 220px;
+    margin: 0 auto 20px;
+}
+
+.about-us p strong {
+    font-size: 28px;
+    line-height: 30px;
+}
+
+
+/* ----------------------- 3.3 What Includes ----------------------- */
+.what-inc .container{
+    padding: 0 15px;
+}
+
+.what-inc ul li{
+    width: 100%;
+}
+
+.what-inc2 .container h4 {
+    font-size: 28px;
+    line-height: 30px;
+}
+
+.what-inc2 ul li{
+    font-size: 26px;
+}
+
+/* ----------------------- 3.5 Blue Box ----------------------- */
+.blue-box .col-md-3:first-child {
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+/* ----------------------- 3.6 Steps ----------------------- */
+.steps .col-md-2{
+    min-height: 200px;
+}
+
+/* ----------------------- 3.7 Sponsors ----------------------- */
+.sponsors-list{
+    width: 290px;
+    height: 70px;
+}
+
+.like .container {
+    height: 462px;
+}
+
+.social {
+    margin: 0 0 0 -105px;
+}
+
+.social li {
+    margin: 0;
+}
+
+h5{
+    font-size: 27px;
+    line-height: 27px;
+}
+
+.footer-form .form-control{
+    margin-bottom: 20px;
+}
+
+.btn-default.red{
+    margin: 0 auto;
+}
+
+.like .container span{
+    font-size: 50px;
+    line-height: 52px;
+}
+
+.like .container{
+    font-size: 38px;
+    line-height: 40px;
+}
+
+.btn-default.red{
+    width: auto;
+    padding: 14px 79px 7px;
+}
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
